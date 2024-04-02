@@ -1,2 +1,4 @@
 .lsp
 .cpcache
+.clj-kondo
+dev.clj
