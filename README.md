@@ -1,5 +1,9 @@
 # Assignments
 
+## Prerequisites
+
+This project needs `babashka v1.3.180` or higher. You can install it by typing `brew install borkdude/brew/babashka` on a Mac.
+
 ## Instructions
 
 1. Fork this repo
@@ -46,7 +50,7 @@ If you are running your tests in watch mode and you save the above, at this poin
 
 ### Further test configuration.
 
-Check out `tests.edn` to see how the tests are configured. For further information check out [kaocha](https://cljdoc.org/d/lambdaisland/kaocha/1.0.861/doc/readme)
+Check out `tests.edn` to see how the tests are configured. For further information check out [kaocha](https://cljdoc.org/d/lambdaisland/kaocha/1.88.1376/doc/readme)
 
 ### Other annotations.
 
