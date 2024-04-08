@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest testing is are]]
             [assignments.sequences :as s]))
 
-(deftest ^:kaocha/pending max-of-pairs
+(deftest ^:kaocha/pending max-of-pairs-test
   (testing "max of pairs with 0 elements"
     (is (= [] (s/max-of-pairs []))))
   (testing "max of pairs with 1 element"
@@ -17,7 +17,7 @@
       [3 3] [3 3 3]
       [2 2 3] [1 2 1 3])))
 
-(deftest ^:kaocha/pending filter-by-index
+(deftest ^:kaocha/pending filter-by-index-test
   (testing "filter-by-index returns elements at odd indices"
     (are [result pred coll] (= result (s/filter-by-index pred coll))
       [] odd? []
@@ -41,3 +41,12 @@
       [1 2] #{0 1 4 5} [1 2 3 4]
       [1 2 5] #{0 1 4 5} [1 2 3 4 5]
       [1 2 5 6] #{0 1 4 5} [1 2 3 4 5 6])))
+
+(deftest ^:kaocha/pending collatz-sequence-test
+  (testing "collatz sequences"
+    (are [x y] (= (s/collatz-sequence x) y)
+      1 [1]
+      2 [2 1]
+      3 [3 10 5 16 8 4 2 1]
+      20 [20 10 5 16 8 4 2 1]
+      23 [23 70 35 106 53 160 80 40 20 10 5 16 8 4 2 1])))
